@@ -5,8 +5,8 @@ CFLAGS  = -O2 -Wall -Wextra -std=c11
 
 all: rebus
 
-rebus: rebus.c solve.c main.c rebus.h
-	$(CC) $(CFLAGS) -o rebus rebus.c solve.c main.c
+rebus: rebus.c solve.c solve_v2.c main.c rebus.h
+	$(CC) $(CFLAGS) -o rebus rebus.c solve.c solve_v2.c main.c
 
 clean:
 	rm -f rebus bench *.o
