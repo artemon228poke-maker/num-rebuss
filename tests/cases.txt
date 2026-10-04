@@ -1,0 +1,7 @@
+# Набор тестовых ребусов для проверки.
+# Один ребус на строку. Строки, начинающиеся с #, игнорируются.
+
+SEND + MORE = MONEY
+BE + BE = MOO
+BIG + CAT = LION
+ELEVEN + NINE + FIVE + FIVE = THIRTY
