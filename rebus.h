@@ -3,13 +3,16 @@
 
 #include <stddef.h>
 
-// максимум слагаемых слева
 #define MAX_TERMS 7
-
-// макс длина одного слова
 #define MAX_WORD 32
 
-// разобранный ребус
+typedef enum {
+    OP_ADD,
+    OP_SUB,
+    OP_MUL,
+    OP_DIV
+} op_kind_t;
+
 typedef struct {
     char raw[512];
     int n_terms;
@@ -17,13 +20,10 @@ typedef struct {
     char result[MAX_WORD];
     char letters[32];
     int n_letters;
+    op_kind_t op;
 } rebus_t;
 
-// разбор строки, 0 = ок, -1 = ошибка
 int rebus_parse(const char *input, rebus_t *out);
-
-// принимает ребус, возвращает строку решения или NULL
-// результат надо освободить через free
 char *solve(const char *puzzle);
 
 #endif
